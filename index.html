@@ -61,7 +61,7 @@
 
       <div class="trust-item reveal">
         <div class="trust-value">Elektrownia Powiśle</div>
-        <div class="trust-label">Dobra 42, Warszawa</div>
+        <div class="trust-label demo-blur">Dobra 42, Warszawa</div>
       </div>
 
       <div class="trust-divider" aria-hidden="true"></div>
@@ -246,11 +246,11 @@
         <dl class="contact-list">
           <div>
             <dt>Adres</dt>
-            <dd>ul. Dobra 42, 00-312 Warszawa<br>Elektrownia Powiśle</dd>
+            <dd class="demo-blur">ul. Dobra 42, 00-312 Warszawa<br>Elektrownia Powiśle</dd>
           </div>
           <div>
             <dt>Telefon</dt>
-            <dd><a href="tel:+48786647841">786 647 841</a></dd>
+            <dd><a href="#" class="demo-blur demo-disabled" title="Wyłączone w wersji demo">786 647 841</a></dd>
           </div>
           <div>
             <dt>Godziny otwarcia</dt>
@@ -262,15 +262,15 @@
           </div>
         </dl>
 
-        <a href="tel:+48786647841" class="btn-solid btn-solid-dark">Zadzwoń i zarezerwuj</a>
+        <a href="#" class="btn-solid btn-solid-dark demo-disabled" title="Wyłączone w wersji demo">Zadzwoń i zarezerwuj</a>
       </div>
 
       
 <div class="contact-map reveal">
-  <a href="https://www.google.com/maps?q=Harvest+Restauracja+Dobra+42+Warszawa" target="_blank" rel="noopener" class="map-fallback">
+  <a href="#" class="map-fallback demo-disabled" title="Wyłączone w wersji demo">
     <span class="map-fallback-pin">&#128205;</span>
     <span class="map-fallback-title">Harvest Restauracja</span>
-    <span class="map-fallback-addr">ul. Dobra 42, Elektrownia Powi&#347;le, Warszawa</span>
+    <span class="map-fallback-addr demo-blur">ul. Dobra 42, Elektrownia Powi&#347;le, Warszawa</span>
     <span class="map-fallback-cta">Otw&oacute;rz w Google Maps &#8594;</span>
   </a>
 </div>
@@ -292,13 +292,24 @@
       <a href="#opinie">Opinie</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
-    <p class="footer-meta">ul. Dobra 42, Elektrownia Powiśle, 00-312 Warszawa · 786 647 841</p>
+    <p class="footer-meta demo-blur">ul. Dobra 42, Elektrownia Powiśle, 00-312 Warszawa · 786 647 841</p>
     <p class="footer-copy">© 2026 Harvest Restauracja. Wszelkie prawa zastrzeżone.</p>
   </div>
 </footer>
 
 
 <style>
+/* Demo mode: hide real contact details and disable outbound actions */
+.demo-blur {
+  filter: blur(6px);
+  user-select: none;
+}
+a.demo-disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: .6;
+}
+
 /* ==========================================================================
    Harvest Restauracja — design tokens
    ========================================================================== */
